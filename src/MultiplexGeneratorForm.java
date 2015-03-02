@@ -10,6 +10,7 @@ public class MultiplexGeneratorForm extends SequenceForm{
     private JButton generateButton;
     private JButton backButton;
     private JButton showDiagramButton;
+    private JButton momentsButton;
 
     public double[] getSequence() {
         return sequence;
@@ -47,6 +48,12 @@ public class MultiplexGeneratorForm extends SequenceForm{
             @Override
             public void actionPerformed(ActionEvent e) {
                 onDiagramBtn();
+            }
+        });
+        momentsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showMomentDialog();
             }
         });
     }

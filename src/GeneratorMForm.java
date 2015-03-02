@@ -12,6 +12,7 @@ public class GeneratorMForm extends SequenceForm {
     private JTextPane panelXn;
     private JTextPane panelYn;
     private JButton showDiagramButton;
+    private JButton momentsButton;
     private double[] Yn;
     private double[] Xn;
 
@@ -65,6 +66,13 @@ public class GeneratorMForm extends SequenceForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 onDiagramBtn();
+            }
+        });
+        
+        momentsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showMomentDialog();
             }
         });
     }

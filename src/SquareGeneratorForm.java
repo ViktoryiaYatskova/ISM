@@ -16,6 +16,7 @@ public class SquareGeneratorForm extends SequenceForm{
     private JButton backBtn;
     private JPanel panel1;
     private JButton showDiagramButton;
+    private JButton momentsButton;
 
     public SquareGeneratorForm(final JFrame parent) {
         super(parent);
@@ -45,6 +46,12 @@ public class SquareGeneratorForm extends SequenceForm{
             @Override
             public void actionPerformed(ActionEvent e) {
                 onDiagramBtn();
+            }
+        });
+        momentsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showMomentDialog();
             }
         });
     }

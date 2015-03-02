@@ -17,6 +17,7 @@ public class LinearGeneratorForm extends SequenceForm {
     private JButton generateButton;
     private JButton backButton;
     private JButton showDiagramButton;
+    private JButton momentsButton;
 
     public LinearGeneratorForm(final JFrame parent) {
         super(parent);
@@ -48,6 +49,12 @@ public class LinearGeneratorForm extends SequenceForm {
             @Override
             public void actionPerformed(ActionEvent e) {
                 onDiagramBtn();
+            }
+        });
+        momentsButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showMomentDialog();
             }
         });
     }

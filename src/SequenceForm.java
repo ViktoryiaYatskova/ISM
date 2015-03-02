@@ -1,6 +1,7 @@
 import javax.swing.*;
 
 public class SequenceForm extends JFrame {
+    private static final int MAX_NUM_SHOW = 30;
     protected JFrame parent;
     protected double[] sequence;
     protected int m;
@@ -27,8 +28,10 @@ public class SequenceForm extends JFrame {
 
     public void showResult(JTextPane textPane1) {
         String str = "";
-        for (double a : sequence) str += (a)/((double)m) + " ";
-
+        
+        for(int i = 0; i < Math.min(MAX_NUM_SHOW, sequence.length); i++)
+            str += sequence[i] + " ";
+        
         textPane1.setText(str);
     }
     
@@ -41,6 +44,10 @@ public class SequenceForm extends JFrame {
                 ((GeneratorMForm)parent).initSequence();
         }
     }
+    
+    public void showMomentDialog(){
+        new MomentDlg(sequence);
+    }
 
     public double[] getSequence() {
         return sequence;
@@ -52,9 +59,13 @@ public class SequenceForm extends JFrame {
         return m;
     }   
     public void showPeriod(){
-        JOptionPane.showMessageDialog(null, GeneratorSequence.findPeriod(sequence));        
+        int period = GeneratorSequence.findPeriod(sequence);
+        if(period > 0)
+            JOptionPane.showMessageDialog(null, period);
+        else
+            JOptionPane.showMessageDialog(null, period, "Wow! Generator is too great. Period not found", JOptionPane.INFORMATION_MESSAGE);
     }
     public void setDisposeAfterGenerate(boolean disposeAfterGenerate) {
         this.disposeAfterGenerate = disposeAfterGenerate;
-    }
+    }   
 }
