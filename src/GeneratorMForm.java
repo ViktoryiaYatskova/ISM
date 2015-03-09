@@ -13,13 +13,13 @@ public class GeneratorMForm extends SequenceForm {
     private JTextPane panelYn;
     private JButton showDiagramButton;
     private JButton momentsButton;
-    private double[] Yn;
-    private double[] Xn;
+    private int[] Yn;
+    private int[] Xn;
 
     private int m2;
     private int m1;
 
-    private int K = 64;
+    private int K = 252;
     private JFrame self;
     
     private SequenceForm sequenceXn;

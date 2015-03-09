@@ -22,10 +22,10 @@ public class DiagramForm extends SequenceForm {
     private JPanel diagramPanel;
     private Chart chart;
 
-    public DiagramForm(double[] xData, final JFrame parent){
+    public DiagramForm(int[] xData, final JFrame parent){
         super(parent);
 
-        double[] yData = new double[xData.length];
+        int[] yData = new int[xData.length];
         yData[0] = 0;
         
         for(int i = 1; i < xData.length; i++)

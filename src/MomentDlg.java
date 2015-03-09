@@ -7,9 +7,9 @@ public class MomentDlg extends JDialog {
     private JButton buttonCancel;
     private JTextPane textPane1;
     private JTextField textField1;
-    private double[] sequence;
+    private int[] sequence;
 
-    public MomentDlg(double[] seq) {        
+    public MomentDlg(int[] seq) {
         getRootPane().setDefaultButton(buttonOK);
         sequence = seq;
 

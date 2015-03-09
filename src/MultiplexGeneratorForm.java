@@ -12,11 +12,11 @@ public class MultiplexGeneratorForm extends SequenceForm{
     private JButton showDiagramButton;
     private JButton momentsButton;
 
-    public double[] getSequence() {
+    public int[] getSequence() {
         return sequence;
     }
 
-    public void setSequence(double[] sequence) {
+    public void setSequence(int[] sequence) {
         this.sequence = sequence;
     }
 

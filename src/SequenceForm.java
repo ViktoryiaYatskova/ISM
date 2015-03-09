@@ -3,7 +3,7 @@ import javax.swing.*;
 public class SequenceForm extends JFrame {
     private static final int MAX_NUM_SHOW = 30;
     protected JFrame parent;
-    protected double[] sequence;
+    protected int[] sequence;
     protected int m;
 
     public boolean disposeAfterGenerate;
@@ -49,10 +49,10 @@ public class SequenceForm extends JFrame {
         new MomentDlg(sequence);
     }
 
-    public double[] getSequence() {
+    public int[] getSequence() {
         return sequence;
     }
-    public void setSequence(double[] sequence) {
+    public void setSequence(int[] sequence) {
         this.sequence = sequence;
     }
     public int getM() {
